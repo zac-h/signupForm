@@ -1,0 +1,156 @@
+* { 
+    margin: 0px; 
+    padding: 0px; 
+}
+
+@font-face {
+    font-family: 'Koulen';
+    src: url(../fonts/Koulen-Regular.ttf);
+}
+
+body{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+}
+/* Side bar */
+#sidebar{
+    min-width: 500px;
+    background-image: url(../img/adrien-olichon-P-KqZsCJ18M-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#sidebar-banner{
+    display: flex;
+    width: 100%;
+    background-color: rgb(128, 128, 128, 0.6);
+    position: relative;
+    left: 0;
+    top: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-text{
+    font-size: 4em;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: inline;
+
+}
+
+.logo{
+    width: 5rem;
+}
+
+/* Main body */
+#main{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header, #form-content, #footer{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#header, #footer{
+    background-color: #f2f4f7;
+    flex-basis: 100%;
+    
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#form-content{
+    box-shadow: 0 4px 10px -5px rgb(132, 131, 131);
+    position: relative;
+    background-color: white;
+}
+
+#footer{
+    font-size: 15px;
+}
+
+#passwordError{
+    font-size: 10px;
+    color: red;
+}
+
+.form-label{
+    font-size: 15px;
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+
+}
+
+.row div{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    padding-right: 100px;
+}
+
+input{
+    border: solid 1px #E5E7EB;
+    border-radius: 0.3rem;
+    height: 30px;
+}
+
+input:focus{
+    border: solid 1px rgb(103, 103, 253);
+    outline: none;
+    box-shadow: 2px 2px 5px rgb(188, 188, 188);
+
+}
+
+input:invalid{
+    border: solid 1px rgb(255, 0, 0);
+    outline: none;
+}
+
+button {
+    padding      : 5px;
+    font         : bold 1em sans-serif;
+    border       : 2px solid #333;
+    border-radius: 5px;
+    background   : none;
+    cursor       : pointer;
+  }
+  
+  button:hover,
+  button:focus {
+    outline     : none;
+    background  : #000;
+    color       : #FFF;
+  }
+
+  #footer p{
+      margin: 10px 0;
+  }
+
+  #footer a:link, #footer a:visited{
+      color: green;
+      font: bold;
+      text-decoration: none;
+  }
+

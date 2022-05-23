@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+        <div id="sidebar">
+            <div id="sidebar-banner">
+                <img src="assets/img/odin-lined.png" alt="logo" class="logo">
+                <p class="sidebar-text">ODIN</p>
+            </div>
+        </div>
+        <div id="main">
+            <div id="header">
+                <p class="header-text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.<br>
+                    <br>
+                    You <em>know</em> you want to.
+                </p>
+            </div>
+            <div id="form-content">
+                <p class="form-header">Let's do this!</p>
+                <form id="myform">
+                    <div class="row">
+                        <div>
+                            <label class="form-label" for="firstName">FIRST NAME*</label>
+                            <input type="text" id="firstName" >
+                        </div>
+                        <div>
+                            <label class="form-label" for="lastName">LAST NAME*</label>
+                            <input type="text" id="lastName" >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <label class="form-label" for="userEmail">EMAIL</label>
+                            <input type="email" id="userEmail">
+                        </div>
+                        <div>
+                            <label class="form-label" for="phoneNumber">PHONE NUMBER</label>
+                            <input type="tel" id="phoneNumber">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <label class="form-label" for="password">PASSWORD*</label>
+                            <input type="password" id="password" required>
+                            <p id="passwordError"></p>
+                        </div>
+                        <div>
+                            <label class="form-label" for="passwordConfirm">CONFIRM PASSWORD*</label>
+                            <input type="password" id="passwordConfirm" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="footer">
+                <button type="submit" class="submit-button" form="myform" value="Update">Create Account</button>
+                <p>Already have an account? <a href="">Log in</a></p>
+                
+            </div>
+        </div>
+        
+        <script>
+            var password = document.getElementById('password');
+            var passwordConfirm = document.getElementById('passwordConfirm')
+            var passwordError = document.getElementById('passwordError');
+
+            function validatePassword(){
+                if(password.value != passwordConfirm.value){
+                    passwordConfirm.setCustomValidity("Passwords don't match");
+                    passwordError.innerText = 'Password do not match'
+                } else {
+                    passwordConfirm.setCustomValidity('')
+                    passwordError.innerText = ''
+                }
+            }
+
+            password.onchange = validatePassword;
+            passwordConfirm.onkeyup = validatePassword;
+        </script>
+    </body>
+</html>
